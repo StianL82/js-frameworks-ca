@@ -20,7 +20,7 @@ const FooterText = styled.p`
 function Footer() {
   return (
     <FooterContainer>
-      <FooterText>&copy; {new Date().getFullYear()} Stians test Footer.</FooterText>
+      <FooterText>&copy; {new Date().getFullYear()} Stian Lilleng</FooterText>
     </FooterContainer>
   );
 }

@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-router-dom";
 
-function NavExample() {
+function HeaderNav() {
   return (
     <>
       <Navbar bg="primary" data-bs-theme="dark">
@@ -27,4 +27,4 @@ function NavExample() {
   );
 }
 
-export default NavExample;
+export default HeaderNav;

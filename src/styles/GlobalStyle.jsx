@@ -3,17 +3,17 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 
 html {
-  --color-bodyBg: "#f0f0f0",
-  --color-text: "#333",
-  --color-primary: "#007BFF",
-  --color-secondary: "#ff6347",
-  --color-heading: "#222",
-  --color-border: "#e0e0e0",
-  --color-buttonBg: "#007BFF",
-  --color-buttonText: "#fff",
-  --color-buttonHoverBg: "#0056b3",
-  --color-link: "#007BFF",
-  --color-linkHover: "#0056b3",
+  --color-bodyBg: #f0f0f0;
+  --color-text: #333;
+  --color-primary: #007BFF;
+  --color-secondary: #ff6347;
+  --color-heading: #222;
+  --color-border: #e0e0e0;
+  --color-buttonBg: #007BFF;
+  --color-buttonText: #fff;
+  --color-buttonHoverBg: #0056b3;
+  --color-link: #007BFF;
+  --color-linkHover: #0056b3;
   }  
 
 body {
