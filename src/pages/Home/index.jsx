@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import NavExample from "../../components/Header";
 import Footer from "../../components/Footer";
 
 const Button = styled.button`
