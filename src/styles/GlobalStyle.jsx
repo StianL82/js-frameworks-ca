@@ -3,10 +3,12 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 
 html {
-  --color-bodyBg: #f0f0f0;
-  --color-text: #333;
+  --color-bodyBg: #FFFBF8;
+  --color-darkGray: #333;
+  --color-textWhite: #FFF;
   --color-primary: #007BFF;
   --color-secondary: #ff6347;
+  --color-lightGray: #E3DDDD;
   --color-heading: #222;
   --color-border: #e0e0e0;
   --color-buttonBg: #007BFF;
@@ -20,8 +22,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: ${(props) => props.theme.bodyBg};
-    color: ${(props) => props.theme.textColor};
+    background-color: ${(props) => props.theme.color.bodyBg};
+    color: ${(props) => props.theme.color.textColor};
   }
 
   *, *::before, *::after {
@@ -33,7 +35,7 @@ body {
     padding: 10px 0;
     font-weight: 700;
     font-family: 'Lobster', cursive;
-    color: ${(props) => props.theme.primaryColor};
+    color: ${(props) => props.theme.color.primaryColor};
   }
 
   p {
@@ -43,7 +45,7 @@ body {
   }
 
   a {
-    color: ${(props) => props.theme.primaryColor};
+    color: ${(props) => props.theme.color.primaryColor};
     text-decoration: none;
     &:hover {
       text-decoration: underline;

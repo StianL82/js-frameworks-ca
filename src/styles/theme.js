@@ -1,9 +1,11 @@
 const theme = {
   color: {
     bodyBg: 'var(--color-bodyBg)',
-    textColor: 'var(--color-text)',
+    darkGrayColor: 'var(--color-darkGray)',
+    textColorWhite: 'var(--color-textWhite)',
     primaryColor: 'var(--color-primary)',
     secondaryColor: 'var(--color-secondary)',
+    lightGray: 'var(--color-lightGray)',
     headingColor: 'var(--color-heading)',
     borderColor: 'var(--color-border)',
     buttonBg: 'var(--color-buttonBg)',
