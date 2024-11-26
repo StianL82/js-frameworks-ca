@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 
 export default function useFetchAPI(url) {
-  const [data, setData] = useState(null); // Data fra API
-  const [isLoading, setIsLoading] = useState(false); // Loading-tilstand
-  const [isError, setIsError] = useState(false); // Error-tilstand
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    // Variabel for å beskytte mot oppdatering av state etter unmount
     let isMounted = true;
 
     async function fetchData() {
@@ -21,7 +20,7 @@ export default function useFetchAPI(url) {
         const json = await response.json();
 
         if (isMounted) {
-          setData(json); // Oppdater data kun hvis komponenten er mountet
+          setData(json);
         }
       } catch (error) {
         if (isMounted) {
@@ -30,18 +29,17 @@ export default function useFetchAPI(url) {
         }
       } finally {
         if (isMounted) {
-          setIsLoading(false); // Slå av loading-tilstand
+          setIsLoading(false);
         }
       }
     }
 
     fetchData();
 
-    // Cleanup-funksjon for å unngå oppdatering av state etter unmount
     return () => {
       isMounted = false;
     };
-  }, [url]); // Avhenger av URL
+  }, [url]);
 
-  return { data, isLoading, isError }; // Returner loading, error og data
+  return { data, isLoading, isError };
 }
