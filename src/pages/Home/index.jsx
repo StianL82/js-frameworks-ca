@@ -1,4 +1,3 @@
-// Home index.jsx
 import React from "react";
 import * as S from "./index.styles";
 import useFetchAPI from "../../hooks/FetchAPI";
