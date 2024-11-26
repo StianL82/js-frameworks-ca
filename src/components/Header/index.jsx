@@ -24,7 +24,7 @@ function HeaderNav() {
             <Nav.Link as={Link} to="/" className="nav-link me-0 me-sm-5">Home</Nav.Link>
             <Nav.Link as={Link} to="/contact" className="nav-link me-0 me-sm-5">Contact</Nav.Link>
           </Nav>
-          <S.CartIcon as={Link} to="/cart">
+          <S.CartIcon as={Link} to="/checkout">
             <img
               src="/images/cart_icon.svg"
               alt="Cart Icon"
