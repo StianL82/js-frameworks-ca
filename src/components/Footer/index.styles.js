@@ -4,8 +4,7 @@ export const FooterContainer = styled.footer`
   background-color: ${(props) => props.theme.color.lightGray};
   color: ${(props) => props.theme.color.textColor};
   text-align: center;
-  padding: 20px;
-  position: fixed;
+  padding: 40px;
   left: 0;
   bottom: 0;
   width: 100%;

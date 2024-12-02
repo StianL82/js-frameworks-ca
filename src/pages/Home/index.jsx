@@ -35,9 +35,9 @@ function Home() {
 
   return (
     <div className="container">
-      <S.Heading>Welcome to My Homepage</S.Heading>
+      <S.Heading>Welcome to Spendit</S.Heading>
       <S.Paragraph>
-        This is a test to see if all styles and components are working correctly.
+        Browse trough the products available or search for a particular product
       </S.Paragraph>
       <SearchBar onSearch={handleSearch} />
       {filteredProducts.length > 0 ? (
