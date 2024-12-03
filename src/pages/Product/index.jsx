@@ -3,6 +3,7 @@ import * as S from "./index.styles";
 import { useParams } from "react-router-dom";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import useFetchAPI from "../../hooks/FetchAPI";
+import AddToCartButton from "../../components/AddToCartButton";
 
 function Product() {
   const { id } = useParams();
@@ -51,7 +52,7 @@ function Product() {
               <p className="h4">Price: kr {product.price}</p>
             )}
             <p className="my-3">{product.description}</p>
-            <button className="btn btn-warning mt-4 px-4 py-2 fw-bold">Add to Cart</button>
+            <AddToCartButton product={product} /> 
           </div>
         </div>
         <S.GradientContainer className="mt-5">
@@ -76,3 +77,4 @@ function Product() {
 }
 
 export default Product;
+
