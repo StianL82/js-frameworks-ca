@@ -27,4 +27,9 @@ export const Paragraph = styled.p`
   color: ${(props) => props.theme.color.textColor};
   font-size: ${(props) => props.theme.fontSizes.medium};
   margin-bottom: ${(props) => props.theme.spacing.medium};
+  text-align: center;
+`;
+
+export const SearchBarContainer = styled.div`
+  padding: 16px;
 `;

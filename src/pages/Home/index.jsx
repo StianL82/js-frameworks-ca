@@ -35,11 +35,13 @@ function Home() {
 
   return (
     <div className="container">
-      <S.Heading>Welcome to Spendit</S.Heading>
+      <h1 className="my-5 text-center">Welcome to Spendit</h1>
       <S.Paragraph>
         Browse trough the products available or search for a particular product
       </S.Paragraph>
-      <SearchBar onSearch={handleSearch} />
+      <S.SearchBarContainer>
+        <SearchBar onSearch={handleSearch} />
+      </S.SearchBarContainer>
       {filteredProducts.length > 0 ? (
         <ProductGrid products={filteredProducts} />
       ) : (
