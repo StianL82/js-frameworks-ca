@@ -2,28 +2,42 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
-html {
-  --color-bodyBg: #FFFBF8;
-  --color-darkGray: #333;
-  --color-textWhite: #FFF;
-  --color-primary: #007BFF;
-  --color-secondary: #ff6347;
-  --color-lightGray: #E3DDDD;
-  --color-heading: #222;
-  --color-border: #e0e0e0;
-  --color-buttonBg: #007BFF;
-  --color-buttonText: #fff;
-  --color-buttonHoverBg: #0056b3;
-  --color-link: #007BFF;
-  --color-linkHover: #0056b3;
-  }  
+  html {
+    --color-bodyBg: #FFFBF8;
+    --color-darkGray: #333;
+    --color-textWhite: #FFF;
+    --color-primary: #007BFF;
+    --color-secondary: #ff6347;
+    --color-lightGray: #E3DDDD;
+    --color-heading: #222;
+    --color-border: #e0e0e0;
+    --color-buttonBg: #007BFF;
+    --color-buttonText: #fff;
+    --color-buttonHoverBg: #0056b3;
+    --color-link: #007BFF;
+    --color-linkHover: #0056b3;
+    height: 100%;
+  }
 
-body {
+  body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
     background-color: ${(props) => props.theme.color.bodyBg};
     color: ${(props) => props.theme.color.textColor};
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  main {
+    flex: 1;
   }
 
   *, *::before, *::after {
@@ -59,4 +73,7 @@ body {
   }
 `;
 
-export default GlobalStyle;						
+
+
+export default GlobalStyle;
+					

@@ -1,15 +1,17 @@
 import React from "react";
 import HeaderNav from "../Header";
 import Footer from "../Footer";
+import * as S from "./index.styles";
 
 function Layout({ children }) {
   return (
-    <div>
+    <S.LayoutContainer>
       <HeaderNav />
-      <main>{children}</main>
+      <S.Main>{children}</S.Main>
       <Footer />
-    </div>
+    </S.LayoutContainer>
   );
 }
 
 export default Layout;
+
