@@ -6,7 +6,7 @@ function CheckoutSuccess() {
   return (
     <div>
       <div>
-        <S.Heading>Checkout Success</S.Heading>
+      <h1 className="my-5 text-center">Checkout Success</h1>
         <S.Paragraph>
           Your order was successful
         </S.Paragraph>
