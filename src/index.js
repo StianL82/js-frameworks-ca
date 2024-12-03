@@ -5,17 +5,20 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./styles/GlobalStyle";
 import theme from "./styles/theme";
 import App from "./App";
+import { CartProvider } from "./components/CartContext"; // Importer CartProvider
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <BrowserRouter>
-        <App />
+        <CartProvider> {/* Omslutt App med CartProvider */}
+          <App />
+        </CartProvider>
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>
 );
+
