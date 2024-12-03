@@ -1,41 +1,93 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const Button = styled.button`
-  padding: ${(props) => props.theme.spacing.medium};
-  background: ${(props) =>
-    props.isActive
-      ? props.theme.color.secondaryColor
-      : props.theme.color.primaryColor};
-  color: ${(props) => props.theme.color.buttonTextColor};
-  border-radius: 6px;
+export const EmptyCartContainer = styled.div`
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+`;
+
+export const BackButton = styled(Link)`
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
   display: inline-flex;
-  justify-content: center;
-  border: 0;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin: 0 auto;
+  align-items: center;
+  font-weight: bold;
 
   &:hover {
-    background: ${(props) => props.theme.color.buttonHoverBg};
+    background-color: #0056b3;
+  }
+
+  svg {
+    margin-right: 8px;
   }
 `;
 
-export const Heading = styled.h1`
-  color: ${(props) => props.theme.color.headingColor};
-  margin-bottom: ${(props) => props.theme.spacing.large};
-  text-align: center;
-`;
 
-export const Paragraph = styled.p`
-  color: ${(props) => props.theme.color.textColor};
-  font-size: ${(props) => props.theme.fontSizes.medium};
-  margin-bottom: ${(props) => props.theme.spacing.medium};
-  text-align: center;
-`;
-
-export const ButtonContainer = styled.div`
+export const ProductCard = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  .product-image {
+    max-width: 100px;
+    margin-right: 20px;
+  }
+
+  .product-info {
+    flex-grow: 1;
+  }
+
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    span {
+      margin: 0 10px;
+    }
+  }
+`;
+
+export const CartSummary = styled.div`
+  padding: 20px;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .details {
+    margin-top: 20px;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      margin-top: 10px;
+    }
+  }
 `;
