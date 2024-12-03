@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import * as S from "./index.styles";
+import CartIcon from "../CartIcon";
 
 function HeaderNav() {
   return (
@@ -21,16 +22,14 @@ function HeaderNav() {
           className="order-3 text-center"
         >
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/" className="nav-link me-0 me-sm-5">Home</Nav.Link>
-            <Nav.Link as={Link} to="/contact" className="nav-link me-0 me-sm-5">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/" className="nav-link me-0 me-sm-5">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/contact" className="nav-link me-0 me-sm-5">
+              Contact
+            </Nav.Link>
           </Nav>
-          <S.CartIcon as={Link} to="/checkout">
-            <img
-              src="/images/cart_icon.svg"
-              alt="Cart Icon"
-            />
-            <span className="cart-badge">0</span>
-          </S.CartIcon>
+          <CartIcon />
         </Navbar.Collapse>
       </Container>
     </S.StyledNavbar>
