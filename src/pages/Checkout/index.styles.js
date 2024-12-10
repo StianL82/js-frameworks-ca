@@ -91,3 +91,11 @@ export const CartSummary = styled.div`
     }
   }
 `;
+
+export const TotalText = styled.p`
+  font-weight: bold;
+  color: #000;
+  font-size: 1.5rem;
+  margin-top: 10px;
+`;
+

@@ -59,7 +59,7 @@ function Checkout() {
             <div className="details">
               <p>Order: {total.toFixed(2)} kr</p>
               <p>Shipping: 0,00 kr</p>
-              <h4>Total: {total.toFixed(2)} kr</h4>
+              <S.TotalText>Total: {total.toFixed(2)} kr</S.TotalText>
               <CheckoutButton />
             </div>
           </S.CartSummary>
