@@ -6,7 +6,7 @@ function ProductCard({ product }) {
   const hasDiscount = product.discountedPrice && product.discountedPrice < product.price;
 
   return (
-    <S.Card>
+    <S.Card as={Link} to={`/product/${product.id}`}>
       <S.Title>{product.title}</S.Title>
       <S.Image src={product.image.url} alt={product.title} />
       {hasDiscount ? (
@@ -14,11 +14,10 @@ function ProductCard({ product }) {
       ) : (
         <S.Price>Price: {product.price} NOK</S.Price>
       )}
-      <S.Button as={Link} to={`/product/${product.id}`}>
-        View Product
-      </S.Button>
+      <S.Button>View Product</S.Button>
     </S.Card>
   );
 }
 
 export default ProductCard;
+

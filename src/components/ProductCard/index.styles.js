@@ -8,6 +8,17 @@ export const Card = styled.div`
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+  }
 `;
 
 export const Title = styled.h2`
