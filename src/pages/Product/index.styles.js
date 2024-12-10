@@ -29,7 +29,15 @@ export const ProductImage = styled.img`
   width: 100%;
   max-width: 300px;
   border-radius: 8px;
+
+  @media (max-width: 768px) {
+    width: 70%;
+    max-width: 80vw;
+    margin: 0 auto;
+    display: block;
+  }
 `;
+
 
 export const OriginalPrice = styled.span`
   font-size: 1rem;
@@ -45,7 +53,6 @@ export const Paragraph = styled.p`
 export const GradientContainer = styled.div`
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-
   background: linear-gradient(180deg, #d6d6d6 0%, rgba(217, 217, 217, 0) 100%);
   padding: 20px;
 `;
@@ -57,3 +64,23 @@ export const ReviewContainer = styled.div`
   padding: 20px;
   margin-bottom: 16px;
 `;
+
+export const ProductDetailsContainer = styled.div`
+  display: flex;
+  gap: 24px;
+  margin: 24px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column; 
+    align-items: center;
+  }
+`;
+
+export const ProductInfo = styled.div`
+  flex-grow: 1;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`;
+

@@ -30,8 +30,8 @@ function Product() {
       </S.HeaderSection>
 
       <div className="container">
-        <div className="d-flex gap-4 my-4">
-          <div className="flex-shrink-0">
+        <S.ProductDetailsContainer>
+          <div>
             <S.ProductImage src={product.image.url} alt={product.title} />
             {product.tags && product.tags.length > 0 && (
               <div className="mt-3">
@@ -39,7 +39,7 @@ function Product() {
               </div>
             )}
           </div>
-          <div className="flex-grow-1">
+          <S.ProductInfo>
             <h2 className="display-5 mb-4">{product.title}</h2>
             {product.discountedPrice && product.discountedPrice < product.price ? (
               <p className="h4">
@@ -52,9 +52,9 @@ function Product() {
               <p className="h4">Price: kr {product.price}</p>
             )}
             <p className="my-3">{product.description}</p>
-            <AddToCartButton product={product} /> 
-          </div>
-        </div>
+            <AddToCartButton product={product} />
+          </S.ProductInfo>
+        </S.ProductDetailsContainer>
         <S.GradientContainer className="mt-5">
           <div className="container">
             <h3 className="mb-4">Customer Reviews</h3>
@@ -77,4 +77,5 @@ function Product() {
 }
 
 export default Product;
+
 
