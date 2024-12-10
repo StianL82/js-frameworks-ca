@@ -10,6 +10,23 @@ export const Logo = styled.img`
 
 export const StyledNavbar = styled(Navbar)`
   background-color: ${(props) => props.theme.color.lightGray};
+  border-bottom: 1px solid ${(props) => props.theme.color.darkGrayColor};
+
+  .nav-link {
+    font-weight: normal;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+
+    &:hover {
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    &.active {
+      font-weight: bold;
+      color: ${(props) => props.theme.color.linkHoverColor};
+      text-decoration: none;
+    }
+  }
 
   .navbar-toggler {
     order: 2;
@@ -39,6 +56,5 @@ export const StyledNavbar = styled(Navbar)`
       order: 3 !important;
     }
   }
-
-  border-bottom: 1px solid ${(props) => props.theme.color.darkGrayColor};
 `;
+
