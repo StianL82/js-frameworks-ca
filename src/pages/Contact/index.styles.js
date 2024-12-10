@@ -1,37 +1,52 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Button = styled.button`
-  padding: ${(props) => props.theme.spacing.medium};
-  background: ${(props) =>
-    props.isActive
-      ? props.theme.color.secondaryColor
-      : props.theme.color.primaryColor};
-  color: ${(props) => props.theme.color.buttonTextColor};
-  border-radius: 6px;
-  border: 0;
-  cursor: pointer;
-  transition: background 0.3s ease;
+export const FormContainer = styled.div`
+  background-color: #f8f1e4;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  &:hover {
-    background: ${(props) => props.theme.color.buttonHoverBg};
+  h2 {
+    text-align: center;
+    margin-bottom: 24px;
   }
-`;
 
-export const Heading = styled.h1`
-  color: ${(props) => props.theme.color.headingColor};
-  margin-bottom: ${(props) => props.theme.spacing.large};
-  text-align: center;
-`;
+  form {
+    display: flex;
+    flex-direction: column;
 
-export const Paragraph = styled.p`
-  color: ${(props) => props.theme.color.textColor};
-  font-size: ${(props) => props.theme.fontSizes.medium};
-  margin-bottom: ${(props) => props.theme.spacing.medium};
+    label {
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      padding: 8px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .text-danger {
+      color: red;
+      font-size: 0.875rem;
+      margin-top: 4px;
+    }
+  }
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  margin-top: 16px;
 `;
