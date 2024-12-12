@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -36,42 +36,52 @@ function Contact() {
     resolver: yupResolver(schema),
   });
 
+  const [showAlert, setShowAlert] = useState(false);
+
   const onSubmit = (data) => {
     console.log(data);
+    setShowAlert(true);
     reset();
+    setTimeout(() => setShowAlert(false), 3000);
   };
 
   return (
     <div className="container">
       <h1 className="my-5 text-center">Contact Us</h1>
-    <S.FormContainer>
-      <form onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="full-name">Full Name:</label>
-      <input id="full-name" {...register("fullName")} />
-      <p className="text-danger">{errors.fullName?.message}</p>
+      <S.FormContainer>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <label htmlFor="full-name">Full Name:</label>
+          <input id="full-name" {...register("fullName")} />
+          <p className="text-danger">{errors.fullName?.message}</p>
 
-      <label htmlFor="subject">Subject:</label>
-      <input id="subject" {...register("subject")} />
-      <p className="text-danger">{errors.subject?.message}</p>
+          <label htmlFor="subject">Subject:</label>
+          <input id="subject" {...register("subject")} />
+          <p className="text-danger">{errors.subject?.message}</p>
 
-      <label htmlFor="email">Email:</label>
-      <input id="email" {...register("email")} />
-      <p className="text-danger">{errors.email?.message}</p>
+          <label htmlFor="email">Email:</label>
+          <input id="email" {...register("email")} />
+          <p className="text-danger">{errors.email?.message}</p>
 
-      <label htmlFor="body">Body:</label>
-      <textarea id="body" {...register("body")} />
-      <p className="text-danger">{errors.body?.message}</p>
+          <label htmlFor="body">Body:</label>
+          <textarea id="body" {...register("body")} />
+          <p className="text-danger">{errors.body?.message}</p>
 
-        <S.ButtonContainer>
-          <button type="submit" className="btn btn-success">
-            Submit
-          </button>
-        </S.ButtonContainer>
-      </form>
-    </S.FormContainer>
+          <S.ButtonContainer>
+            <button type="submit" className="btn btn-success">
+              Submit
+            </button>
+          </S.ButtonContainer>
+        </form>
+        {showAlert && (
+          <div className="alert alert-success mt-3" role="alert">
+            Your message has been successfully sent!
+          </div>
+        )}
+      </S.FormContainer>
     </div>
   );
 }
 
 export default Contact;
+
 
