@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { ButtonBase } from '../../styles/GlobalStyle';
 
 export const FormContainer = styled.div`
   background-color: #f8f1e4;
@@ -49,4 +50,13 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 16px;
+`;
+
+export const Button = styled(ButtonBase)`
+  background-color: #007bff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
 `;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { ButtonBase } from '../../styles/GlobalStyle';
 
 export const EmptyCartContainer = styled.div`
   background: #f8f9fa;
@@ -10,25 +10,21 @@ export const EmptyCartContainer = styled.div`
   text-align: center;
 `;
 
-export const BackButton = styled(Link)`
+export const BackButton = styled(ButtonBase)`
   background-color: #007bff;
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
   display: inline-flex;
   align-items: center;
-  font-weight: bold;
 
   &:hover {
     background-color: #0056b3;
+    text-decoration: none;
   }
 
   svg {
     margin-right: 8px;
   }
 `;
-
 
 export const ProductCard = styled.div`
   display: flex;
@@ -98,4 +94,3 @@ export const TotalText = styled.p`
   font-size: 1.5rem;
   margin-top: 10px;
 `;
-

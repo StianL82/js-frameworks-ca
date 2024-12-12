@@ -1,4 +1,16 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+export const ButtonBase = styled.button`
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #fff;
+
+`;
 
 const GlobalStyle = createGlobalStyle`
 
@@ -22,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     background-color: ${(props) => props.theme.color.bodyBg};
     color: ${(props) => props.theme.color.textColor};
     display: flex;
@@ -65,14 +77,6 @@ const GlobalStyle = createGlobalStyle`
       text-decoration: underline;
     }
   }
-
-  button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    cursor: pointer;
-  }
 `;
-
-
 
 export default GlobalStyle;

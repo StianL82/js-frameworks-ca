@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useCart } from "../CartContext";
+import * as S from "./index.styles";
 
 function AddToCartButton({ product }) {
   const { addToCart } = useCart();
@@ -13,12 +14,9 @@ function AddToCartButton({ product }) {
 
   return (
     <div>
-      <button
-        className="btn btn-warning mt-4 px-4 py-2 fw-bold"
-        onClick={handleAddToCart}
-      >
+      <S.Button onClick={handleAddToCart}>
         Add to Cart
-      </button>
+      </S.Button>
       {showAlert && (
         <div className="alert alert-success mt-3" role="alert">
           {product.title} has been added to your cart!
@@ -29,5 +27,6 @@ function AddToCartButton({ product }) {
 }
 
 export default AddToCartButton;
+
 
 

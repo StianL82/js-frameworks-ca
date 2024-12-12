@@ -1,20 +1,15 @@
 import styled from 'styled-components';
+import { ButtonBase } from '../../styles/GlobalStyle';
 
-export const Button = styled.button`
-  padding: 0.5rem 1rem;
+export const Button = styled(ButtonBase)`
   background-color: #ffc107;
-  color: #fff;
-  border-radius: 0.25rem;
   display: inline-flex;
   justify-content: center;
-  border: 0;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
   margin: 1rem auto;
-  font-weight: bold;
 
   &:hover {
     background-color: #e0a800;
+    text-decoration: none;
   }
 `;
 

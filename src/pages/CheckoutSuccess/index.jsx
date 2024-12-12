@@ -14,9 +14,10 @@ function CheckoutSuccess() {
           Thank you for your purchase!
         </S.Paragraph>
         <S.ButtonContainer>
-          <S.Button as={Link} to="/" isActive>
-            Back To Store
-          </S.Button>
+        <S.Button as={Link} to="/">
+          Back To Store
+        </S.Button>
+
         </S.ButtonContainer>
       </div>
     </div>

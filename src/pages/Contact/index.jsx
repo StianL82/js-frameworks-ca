@@ -67,9 +67,9 @@ function Contact() {
           <p className="text-danger">{errors.body?.message}</p>
 
           <S.ButtonContainer>
-            <button type="submit" className="btn btn-success">
+            <S.Button type="submit" className="btn btn-success">
               Submit
-            </button>
+            </S.Button>
           </S.ButtonContainer>
         </form>
         {showAlert && (
