@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Card = styled.div`
   border: 1px solid #ddd;
@@ -10,9 +10,7 @@ export const Card = styled.div`
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  transition:
-    transform 0.1s ease,
-    box-shadow 0.1s ease;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
 
   &:hover {
     transform: translateY(-4px);
@@ -22,8 +20,10 @@ export const Card = styled.div`
 `;
 
 export const Title = styled.h2`
+  font-family: "Montserrat", sans-serif; 
   font-size: 1.2rem;
   margin-bottom: 12px;
+  color: #000;
 `;
 
 export const Image = styled.img`
@@ -58,3 +58,5 @@ export const Button = styled.button`
     background-color: #0056b3;
   }
 `;
+
+
