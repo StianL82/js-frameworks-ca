@@ -18,7 +18,7 @@ The assignment emphasized creating a dynamic and user-friendly application, feat
 
 ### Required features was:
 
-We were tasked with build out the following pages for an eCom store:
+We were tasked with building out the following pages for an eCom store:
 
 - Homepage
 - Individual product page
@@ -26,7 +26,7 @@ We were tasked with build out the following pages for an eCom store:
 - Checkout success page
 - Contact page
 
-On our Home page, we were also tasked with including a search bar to allow users to search for individual products
+On our Homepage, we were also tasked with including a search bar to allow users to search for individual products.
 
 ## Built With
 
