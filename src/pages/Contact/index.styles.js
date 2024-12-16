@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { ButtonBase } from '../../styles/GlobalStyle';
 
 export const FormContainer = styled.div`
-  background-color: #f8f1e4;
+  background-color: ${(props) => props.theme.color.formBg};
   padding: 24px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid ${(props) => props.theme.color.lightGray};
   max-width: 500px;
   margin: 0 auto 40px auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -28,7 +28,7 @@ export const FormContainer = styled.div`
     textarea {
       padding: 8px;
       margin-top: 8px;
-      border: 1px solid #ccc;
+      border: 1px solid ${(props) => props.theme.color.mediumGray};
       border-radius: 4px;
       font-size: 1rem;
     }
@@ -53,10 +53,10 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled(ButtonBase)`
-  background-color: #007bff;
+  background-color: ${(props) => props.theme.color.primaryColor};
   cursor: pointer;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: ${(props) => props.theme.color.buttonHoverBg};
   }
 `;

@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { ButtonBase } from '../../styles/GlobalStyle';
 
 export const Card = styled.div`
-  border: 1px solid #ddd;
+  border: 1px solid ${(props) => props.theme.color.lightGray};
   border-radius: 8px;
   padding: 16px;
   text-align: center;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.color.white};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-decoration: none;
@@ -26,7 +26,7 @@ export const Title = styled.h2`
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   margin-bottom: 12px;
-  color: #000;
+  color: ${(props) => props.theme.color.darkGray};
 `;
 
 export const Image = styled.img`
@@ -49,10 +49,10 @@ export const DiscountedPrice = styled.p`
 `;
 
 export const Button = styled(ButtonBase)`
-  background-color: #007bff;
+  background-color: ${(props) => props.theme.color.primaryColor};
   cursor: pointer;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: ${(props) => props.theme.color.buttonHoverBg};
   }
 `;

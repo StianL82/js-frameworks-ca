@@ -10,11 +10,13 @@ export const Logo = styled.img`
 
 export const StyledNavbar = styled(Navbar)`
   background-color: ${(props) => props.theme.color.lightGray};
-  border-bottom: 1px solid ${(props) => props.theme.color.darkGrayColor};
+  border-bottom: 1px solid ${(props) => props.theme.color.darkGray};
 
   .nav-link {
     font-weight: normal;
-    transition: color 0.3s ease, font-weight 0.3s ease;
+    transition:
+      color 0.3s ease,
+      font-weight 0.3s ease;
 
     &:hover {
       font-weight: bold;
@@ -57,4 +59,3 @@ export const StyledNavbar = styled(Navbar)`
     }
   }
 `;
-

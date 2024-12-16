@@ -5,7 +5,9 @@ export const CartIcon = styled.div`
   display: inline-flex;
   align-items: center;
   cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 
   &:hover {
     transform: scale(1.02);
@@ -16,7 +18,7 @@ export const CartIcon = styled.div`
     top: 15px;
     right: -10px;
     background: ${(props) => props.theme.color.secondaryColor};
-    color: ${(props) => props.theme.color.buttonTextColor};
+    color: ${(props) => props.theme.color.white};
     font-size: 0.8rem;
     font-weight: bold;
     border-radius: 50%;
@@ -37,4 +39,3 @@ export const CartIcon = styled.div`
     }
   }
 `;
-

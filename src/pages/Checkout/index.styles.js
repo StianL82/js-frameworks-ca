@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { ButtonBase } from '../../styles/GlobalStyle';
 
 export const EmptyCartContainer = styled.div`
-  background: #f8f9fa;
-  border: 1px solid #e0e0e0;
+  background: ${(props) => props.theme.color.cardBg};
+  border: 1px solid ${(props) => props.theme.color.lightGray};
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 16px;
@@ -11,13 +11,13 @@ export const EmptyCartContainer = styled.div`
 `;
 
 export const BackButton = styled(ButtonBase)`
-  background-color: #007bff;
-  color: #fff;
+  background-color: ${(props) => props.theme.color.primaryColor};
+  color: ${(props) => props.theme.color.white};
   display: inline-flex;
   align-items: center;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: ${(props) => props.theme.color.buttonHoverBg};
     text-decoration: none;
   }
 
@@ -32,8 +32,8 @@ export const ProductCard = styled.div`
   justify-content: space-between;
   padding: 20px;
   margin-bottom: 20px;
-  background: #f8f9fa;
-  border: 1px solid #ddd;
+  background: ${(props) => props.theme.color.cardBg};
+  border: 1px solid ${(props) => props.theme.color.lightGray};
   border-radius: 8px;
 
   .product-image {
@@ -43,6 +43,14 @@ export const ProductCard = styled.div`
 
   .product-info {
     flex-grow: 1;
+
+    h5 {
+      color: ${(props) => props.theme.color.darkGray};
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
   }
 
   .quantity-control {
@@ -51,8 +59,8 @@ export const ProductCard = styled.div`
     margin-top: 10px;
 
     button {
-      background: #007bff;
-      color: #fff;
+      background: ${(props) => props.theme.color.primaryColor};
+      color: ${(props) => props.theme.color.white};
       border: none;
       padding: 5px 10px;
       cursor: pointer;
@@ -66,8 +74,8 @@ export const ProductCard = styled.div`
 
 export const CartSummary = styled.div`
   padding: 20px;
-  background: #f8f9fa;
-  border: 1px solid #ddd;
+  background: ${(props) => props.theme.color.cardBg};
+  border: 1px solid ${(props) => props.theme.color.lightGray};
   border-radius: 8px;
 
   ul {
@@ -90,7 +98,6 @@ export const CartSummary = styled.div`
 
 export const TotalText = styled.p`
   font-weight: bold;
-  color: #000;
   font-size: 1.5rem;
   margin-top: 10px;
 `;

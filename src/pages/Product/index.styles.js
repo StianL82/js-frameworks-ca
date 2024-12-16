@@ -5,11 +5,11 @@ export const HeaderSection = styled.div`
   width: 100%;
   background: linear-gradient(180deg, #d6d6d6 0%, rgba(217, 217, 217, 0) 100%);
   padding: 40px;
-  color: #fff;
+  color: ${(props) => props.theme.color.white};
 `;
 
 export const BackLink = styled(Link)`
-  color: #333;
+  color: ${(props) => props.theme.color.darkGray};
   text-decoration: none;
   font-weight: bold;
   display: flex;
@@ -38,14 +38,12 @@ export const ProductImage = styled.img`
   }
 `;
 
-
 export const OriginalPrice = styled.span`
   font-size: 1rem;
   color: red;
 `;
 
 export const Paragraph = styled.p`
-  color: ${(props) => props.theme.color.textColor};
   font-size: ${(props) => props.theme.fontSizes.medium};
   margin-bottom: ${(props) => props.theme.spacing.medium};
 `;
@@ -58,8 +56,8 @@ export const GradientContainer = styled.div`
 `;
 
 export const ReviewContainer = styled.div`
-  background: #fff;
-  border: 1px solid #ddd;
+  background: ${(props) => props.theme.color.white};
+  border: 1px solid ${(props) => props.theme.color.mediumGray};
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 16px;
@@ -71,7 +69,7 @@ export const ProductDetailsContainer = styled.div`
   margin: 24px 0;
 
   @media (max-width: 768px) {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
   }
 `;
@@ -83,4 +81,3 @@ export const ProductInfo = styled.div`
     text-align: center;
   }
 `;
-

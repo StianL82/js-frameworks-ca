@@ -8,25 +8,26 @@ export const ButtonBase = styled.button`
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
-  color: #fff;
+  color: ${(props) => props.theme.color.white}
+;
 
 `;
 
 const GlobalStyle = createGlobalStyle`
 
   html {
-    --color-bodyBg: #FFFBF8;
-    --color-darkGray: #333;
-    --color-textWhite: #FFF;
+    --color-bodyBg: #fffBF8;
+    --color-darkGray: #333333;
+    --color-white: #fff;
     --color-primary: #007BFF;
     --color-secondary: #ff6347;
     --color-lightGray: #E3DDDD;
-    --color-heading: #222;
-    --color-border: #e0e0e0;
-    --color-buttonBg: #007BFF;
-    --color-buttonText: #fff;
+    --color-mediumGray: #AAAAAA;
+    --color-cardBg: #f8f9fa;
+    --color-formBg: #f8f1e4;
+    --color-orangeButton: #ffc107;
+    --color-orangeButtonHover: #e0a800;
     --color-buttonHoverBg: #0056b3;
-    --color-link: #007BFF;
     --color-linkHover: #0056b3;
     height: 100%;
   }
@@ -36,7 +37,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Open Sans', Arial, sans-serif;
     background-color: ${(props) => props.theme.color.bodyBg};
-    color: ${(props) => props.theme.color.textColor};
     display: flex;
     flex-direction: column;
     min-height: 100vh;

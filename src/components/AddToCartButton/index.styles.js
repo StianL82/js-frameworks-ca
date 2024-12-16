@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { ButtonBase } from '../../styles/GlobalStyle';
 
 export const Button = styled(ButtonBase)`
-  background-color: #ffc107;
+  background-color: ${(props) => props.theme.color.orangeButton};
 
   &:hover {
-    background-color: #e0a800;
+  background-color: ${(props) => props.theme.color.orangeButtonHover};
   }
 `;
