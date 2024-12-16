@@ -10,7 +10,7 @@ In this course assignment, we were tasked with applying our knowledge of React t
 
 ## Visit the page at:
 
-[![Spendit](/public/images/logo.png)](https://js-framework-ca-spendit.netlify.app/)
+[![Spendit](/public/images/READMElogo.png)](https://js-framework-ca-spendit.netlify.app/)
 
 ## Description
 
