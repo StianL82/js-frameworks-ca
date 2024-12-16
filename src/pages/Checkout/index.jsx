@@ -36,34 +36,43 @@ function Checkout() {
                     <span>{product.quantity}</span>
                     <button onClick={() => updateQuantity(product.id, product.quantity + 1)}>+</button>
                   </div>
-                  <p>Price: {(product.price * product.quantity).toFixed(2)} kr</p>
+                  <p>
+                    Price: {((product.discountedPrice ?? product.price) * product.quantity).toFixed(2)} kr
+                  </p>
                 </div>
                 <button onClick={() => removeFromCart(product.id)} className="btn btn-danger">
                   <FaTrash />
                 </button>
               </S.ProductCard>
             ))
+            
           )}
         </div>
 
         <div className="col-md-5">
-          <S.CartSummary>
-            <h3>Cart Summary</h3>
-            <ul>
-              {cart.map((product) => (
-                <li key={product.id}>
-                  {product.title} x {product.quantity} - {(product.price * product.quantity).toFixed(2)} kr
-                </li>
-              ))}
-            </ul>
-            <div className="details">
-              <p>Order: {total.toFixed(2)} kr</p>
-              <p>Shipping: 0,00 kr</p>
-              <S.TotalText>Total: {total.toFixed(2)} kr</S.TotalText>
-              <CheckoutButton />
-            </div>
-          </S.CartSummary>
-        </div>
+  <S.CartSummary>
+    <h3>Cart Summary</h3>
+    <ul>
+      {cart.map((product) => (
+        <li key={product.id}>
+          {product.title} x {product.quantity} - 
+          {((product.discountedPrice ?? product.price) * product.quantity).toFixed(2)} kr
+        </li>
+      ))}
+    </ul>
+    <div className="details">
+      <p>
+        Order: {cart.reduce((acc, product) => acc + ((product.discountedPrice ?? product.price) * product.quantity), 0).toFixed(2)} kr
+      </p>
+      <p>Shipping: 0,00 kr</p>
+      <S.TotalText>
+        Total: {cart.reduce((acc, product) => acc + ((product.discountedPrice ?? product.price) * product.quantity), 0).toFixed(2)} kr
+      </S.TotalText>
+      <CheckoutButton />
+    </div>
+  </S.CartSummary>
+</div>
+
       </div>
     </div>
   );
