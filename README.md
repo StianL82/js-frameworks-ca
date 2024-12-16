@@ -2,7 +2,7 @@
 
 ## Spendit
 
-![image](/images/screencapture-js-frameworks-ca.png)
+![image](/public/images/screencapture-js-frameworks-ca.png)
 
 ## Project Overview
 
@@ -10,7 +10,7 @@ In this course assignment, we were tasked with applying our knowledge of React t
 
 ## Visit the page at:
 
-[![Spendit](/images/logo.png)](https://js-framework-ca-spendit.netlify.app/)
+[![Spendit](/public/images/logo.png)](https://js-framework-ca-spendit.netlify.app/)
 
 ## Description
 
@@ -48,12 +48,15 @@ git clone git@github.com/StianL82/js-frameworks-ca
 ```
 
 Install dependencies
+
 ```
 npm install
 ```
 
 ## Run the project
+
 Start the development server
+
 ```
 npm start
 ```
