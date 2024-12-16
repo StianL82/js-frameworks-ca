@@ -4,7 +4,7 @@ import * as S from "./index.styles";
 function Footer() {
   return (
     <S.FooterContainer>
-      <S.FooterText>&copy; {new Date().getFullYear()} Stian Lilleng</S.FooterText>
+      <S.FooterText>&copy; {new Date().getFullYear()} Spendit by Stian Lilleng</S.FooterText>
     </S.FooterContainer>
   );
 }
