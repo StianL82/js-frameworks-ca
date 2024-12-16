@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# JS Framework CA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Spendit
 
-## Available Scripts
+![image](/images/screencapture-js-frameworks-ca.png)
 
-In the project directory, you can run:
+## Project Overview
 
-### `npm start`
+In this course assignment, we were tasked with applying our knowledge of React to develop a fully functional eCommerce store. 😄
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Visit the page at:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[![Spendit](/images/logo.png)](https://js-framework-ca-spendit.netlify.app/)
 
-### `npm test`
+## Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The assignment emphasized creating a dynamic and user-friendly application, featuring product listings, cart management, and seamless navigation to enhance the shopping experience.
 
-### `npm run build`
+### Required features was:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We were tasked with build out the following pages for an eCom store:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Homepage
+- Individual product page
+- Cart page
+- Checkout success page
+- Contact page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+On our Home page, we were also tasked with including a search bar to allow users to search for individual products
 
-### `npm run eject`
+## Built With
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- HTML/CSS
+- Bootstrap
+- JavaScript
+- REACT
+- React Router
+- Noroff API for fetching product data
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Clone the repo:
 
-## Learn More
+```
+git clone git@github.com/StianL82/js-frameworks-ca
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install dependencies
+```
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Run the project
+Start the development server
+```
+npm start
+```
 
-### Code Splitting
+[Link to Netlify-page](https://js-framework-ca-spendit.netlify.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Contributing
 
-### Analyzing the Bundle Size
+This repo is not open to any contributions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contact 📫
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to contact me at stian.lilleng@gmail.com
