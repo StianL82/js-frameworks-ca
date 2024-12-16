@@ -37,15 +37,28 @@ export const Image = styled.img`
   margin-bottom: 12px;
 `;
 
+export const PriceContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+`;
+
 export const Price = styled.p`
   font-weight: bold;
   margin-bottom: 12px;
 `;
 
-export const DiscountedPrice = styled.p`
+export const OriginalPrice = styled.span`
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: ${(props) => props.theme.color.secondaryColor};
+`;
+
+export const DiscountedPrice = styled.span`
   font-weight: bold;
-  margin-bottom: 12px;
-  color: red;
+  font-size: 1.1rem;
 `;
 
 export const Button = styled(ButtonBase)`
@@ -56,3 +69,4 @@ export const Button = styled(ButtonBase)`
     background-color: ${(props) => props.theme.color.buttonHoverBg};
   }
 `;
+
