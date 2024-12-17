@@ -5,6 +5,7 @@ const theme = {
     white: 'var(--color-white)',
     primaryColor: 'var(--color-primary)',
     secondaryColor: 'var(--color-secondary)',
+    dangerColor: 'var(--color-danger)',
     lightGray: 'var(--color-lightGray)',
     mediumGray: 'var(--color-mediumGray)',
     cardBg: 'var(--color-cardBg)',

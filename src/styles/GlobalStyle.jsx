@@ -19,15 +19,16 @@ const GlobalStyle = createGlobalStyle`
     --color-bodyBg: #fffBF8;
     --color-darkGray: #333333;
     --color-white: #fff;
-    --color-primary: #007BFF;
+    --color-primary: #0056B3;
     --color-secondary: #ff6347;
+    --color-danger: #dc3545;
     --color-lightGray: #E3DDDD;
     --color-mediumGray: #AAAAAA;
     --color-cardBg: #f8f9fa;
     --color-formBg: #f8f1e4;
     --color-orangeButton: #ffc107;
     --color-orangeButtonHover: #e0a800;
-    --color-buttonHoverBg: #0056b3;
+    --color-buttonHoverBg: #003F7A;
     --color-linkHover: #0056b3;
     height: 100%;
   }
@@ -69,6 +70,17 @@ const GlobalStyle = createGlobalStyle`
     margin: 10px 0;
     font-family: 'Open Sans', sans-serif;
   }
+
+  .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
   a {
     color: ${(props) => props.theme.color.primaryColor};

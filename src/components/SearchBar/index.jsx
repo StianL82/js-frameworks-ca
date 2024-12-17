@@ -21,8 +21,12 @@ function SearchBar({ onSearch }) {
 
   return (
     <S.SearchContainer>
+      <label htmlFor="search" className="sr-only">
+        Search for products
+      </label>
       <FaSearch className="search-icon" />
       <S.Input
+        id="search"
         type="text"
         placeholder="Search for products..."
         value={searchTerm}
@@ -33,6 +37,7 @@ function SearchBar({ onSearch }) {
 }
 
 export default SearchBar;
+
 
 
 

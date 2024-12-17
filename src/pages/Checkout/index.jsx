@@ -65,6 +65,7 @@ function Checkout() {
                   className="btn btn-danger"
                 >
                   <FaTrash />
+                  <span className="sr-only">Remove from cart</span>
                 </button>
               </S.ProductCard>
             ))
@@ -73,7 +74,7 @@ function Checkout() {
 
         <div className="col-md-5">
           <S.CartSummary>
-            <h3>Cart Summary</h3>
+          <h2 className="cart-summary-title">Cart Summary</h2>
             <ul>
               {cart.map((product) => (
                 <li key={product.id}>

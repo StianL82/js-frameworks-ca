@@ -53,7 +53,7 @@ export const Price = styled.p`
 export const OriginalPrice = styled.span`
   font-size: 0.9rem;
   text-decoration: line-through;
-  color: ${(props) => props.theme.color.secondaryColor};
+  color: ${(props) => props.theme.color.dangerColor};
 `;
 
 export const DiscountedPrice = styled.span`
@@ -62,11 +62,19 @@ export const DiscountedPrice = styled.span`
 `;
 
 export const Button = styled(ButtonBase)`
-  background-color: ${(props) => props.theme.color.primaryColor};
-  cursor: pointer;
+  background-color: ${(props) => props.theme.color.primaryColor || "#007bff"} !important;
+  color: ${(props) => props.theme.color.white || "#ffffff"} !important;
+  border: none;
 
   &:hover {
-    background-color: ${(props) => props.theme.color.buttonHoverBg};
+    background-color: ${(props) => props.theme.color.buttonHoverBg || "#0056b3"} !important;
+    color: ${(props) => props.theme.color.white || "#ffffff"} !important;
+  }
+
+  &:focus {
+    outline: 2px solid ${(props) => props.theme.color.primaryColor || "#0056b3"} !important;
+    outline-offset: 2px;
   }
 `;
+
 

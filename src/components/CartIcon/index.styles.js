@@ -17,7 +17,7 @@ export const CartIcon = styled.div`
     position: absolute;
     top: 15px;
     right: -10px;
-    background: ${(props) => props.theme.color.secondaryColor};
+    background: ${(props) => props.theme.color.dangerColor};
     color: ${(props) => props.theme.color.white};
     font-size: 0.8rem;
     font-weight: bold;

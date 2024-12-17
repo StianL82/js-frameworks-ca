@@ -15,7 +15,7 @@ function HeaderNav() {
           className="order-2 ms-auto"
         />
         <Navbar.Brand as={NavLink} to="/" className="order-1 me-auto logo">
-          <S.Logo src="/images/logo.png" alt="Logo" />
+          <S.Logo src="/images/logo.png" alt="Logo for Spendit" />
         </Navbar.Brand>
         <Navbar.Collapse
           id="navbarResponsive"

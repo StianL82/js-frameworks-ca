@@ -94,7 +94,14 @@ export const CartSummary = styled.div`
       margin-top: 10px;
     }
   }
+
+  .cart-summary-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
 `;
+
 
 export const TotalText = styled.p`
   font-weight: bold;

@@ -40,7 +40,7 @@ function Product() {
             )}
           </div>
           <S.ProductInfo>
-            <h2 className="display-5 mb-4">{product.title}</h2>
+            <h1 className="display-5 mb-4">{product.title}</h1>
             {product.discountedPrice && product.discountedPrice < product.price ? (
               <p className="h4">
                 Price: kr {product.discountedPrice}{" "}
@@ -57,7 +57,7 @@ function Product() {
         </S.ProductDetailsContainer>
         <S.GradientContainer className="mt-5">
           <div className="container">
-            <h3 className="mb-4">Customer Reviews</h3>
+            <h2 className="mb-4">Customer Reviews</h2>
             {product.reviews && product.reviews.length > 0 ? (
               product.reviews.map((review, index) => (
                 <S.ReviewContainer key={index}>
