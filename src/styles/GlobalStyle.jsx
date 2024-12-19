@@ -30,6 +30,8 @@ const GlobalStyle = createGlobalStyle`
     --color-orangeButtonHover: #e0a800;
     --color-buttonHoverBg: #003F7A;
     --color-linkHover: #0056b3;
+    --color-success: #28a745;
+
     height: 100%;
   }
 

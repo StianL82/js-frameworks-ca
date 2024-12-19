@@ -19,6 +19,11 @@ function Product() {
     return <S.Paragraph>Error fetching product details!</S.Paragraph>;
   }
 
+  const discountDifference =
+    product.discountedPrice && product.price
+      ? (product.price - product.discountedPrice).toFixed(2)
+      : null;
+
   return (
     <div>
       <S.HeaderSection>
@@ -42,12 +47,17 @@ function Product() {
           <S.ProductInfo>
             <h1 className="display-5 mb-4">{product.title}</h1>
             {product.discountedPrice && product.discountedPrice < product.price ? (
-              <p className="h4">
-                Price: kr {product.discountedPrice}{" "}
-                <span className="text-danger h5">
-                  (<strike>kr {product.price}</strike>)
-                </span>
-              </p>
+              <>
+                <p className="h4">
+                  Price: kr {product.discountedPrice}{" "}
+                  <span className="text-danger h5">
+                    (<strike>kr {product.price}</strike>)
+                  </span>
+                </p>
+                {discountDifference && (
+                  <S.SaveText>Save: kr {discountDifference}</S.SaveText>
+                )}
+              </>
             ) : (
               <p className="h4">Price: kr {product.price}</p>
             )}
@@ -77,5 +87,6 @@ function Product() {
 }
 
 export default Product;
+
 
 

@@ -14,6 +14,8 @@ const theme = {
     orangeButtonHover: 'var(--color-orangeButtonHover)',
     buttonHoverBg: 'var(--color-buttonHoverBg)',
     linkHoverColor: 'var(--color-linkHover)',
+    successColor: 'var(--color-success)',
+
   },
   spacing: {
     small: '8px',

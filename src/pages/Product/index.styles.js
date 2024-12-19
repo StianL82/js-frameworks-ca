@@ -81,3 +81,11 @@ export const ProductInfo = styled.div`
     text-align: center;
   }
 `;
+
+export const SaveText = styled.p`
+  font-size: ${(props) => props.theme.fontSizes.medium};
+  color: ${(props) => props.theme.color.successColor};
+  margin-top: 8px;
+  font-weight: bold;
+`;
+
