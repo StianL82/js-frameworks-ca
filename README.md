@@ -16,7 +16,7 @@ In this course assignment, we were tasked with applying our knowledge of React t
 
 The assignment emphasized creating a dynamic and user-friendly application, featuring product listings, cart management, and seamless navigation to enhance the shopping experience.
 
-### Required features was:
+### Required features were:
 
 We were tasked with building out the following pages for an eCom store:
 
@@ -33,7 +33,7 @@ On our Homepage, we were also tasked with including a search bar to allow users 
 - HTML/CSS
 - Bootstrap
 - JavaScript
-- REACT
+- React
 - React Router
 - Noroff API for fetching product data
 
