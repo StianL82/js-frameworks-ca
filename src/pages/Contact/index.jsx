@@ -4,6 +4,27 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import * as S from './index.styles';
 
+/**
+ * Contact Form Component
+ *
+ * A form component that allows users to submit inquiries. Uses React Hook Form with Yup validation.
+ * Displays success messages and handles validation errors.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered contact form.
+ *
+ * @function Contact
+ * @description Renders a contact form with validation and submission handling.
+ *
+ * @constant {Object} schema - Yup validation schema for form fields.
+ * @constant {function} useForm - React Hook Form's useForm hook for handling form state and validation.
+ * @constant {boolean} showAlert - State to manage the display of the success alert.
+ *
+ * @function onSubmit
+ * @description Handles form submission, logs data, resets the form, and shows a success message.
+ * @param {Object} data - The submitted form data.
+ */
+
 const schema = yup
   .object({
     fullName: yup

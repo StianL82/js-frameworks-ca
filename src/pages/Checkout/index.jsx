@@ -5,6 +5,24 @@ import * as S from './index.styles';
 import { FaArrowLeft, FaTrash } from 'react-icons/fa';
 import CheckoutButton from '../../components/CheckoutButton';
 
+/**
+ * Checkout Page
+ *
+ * Displays the shopping cart contents, allowing users to adjust quantities, remove items,
+ * and proceed to checkout. Also shows a cart summary with order details.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered checkout page.
+ *
+ * @function Checkout
+ * @description Renders the cart items, order summary, and checkout button.
+ *
+ * @constant {Object[]} cart - The current items in the user's cart.
+ * @constant {Function} removeFromCart - Function to remove a product from the cart by its ID.
+ * @constant {Function} updateQuantity - Function to update the quantity of a product in the cart.
+ * @constant {number} total - The total cost of all items in the cart.
+ */
+
 function Checkout() {
   const { cart, removeFromCart, updateQuantity } = useCart();
 

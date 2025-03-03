@@ -2,6 +2,19 @@ import React from 'react';
 import * as S from './index.styles';
 import { Link } from 'react-router-dom';
 
+/**
+ * Checkout Success Page
+ *
+ * Displays a confirmation message after a successful checkout.
+ * Provides a button to navigate back to the store.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered checkout success page.
+ *
+ * @function CheckoutSuccess
+ * @description Renders a success message and a navigation button to return to the store.
+ */
+
 function CheckoutSuccess() {
   return (
     <div>

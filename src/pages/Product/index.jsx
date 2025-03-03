@@ -5,6 +5,28 @@ import { FaArrowCircleLeft } from 'react-icons/fa';
 import useFetchAPI from '../../hooks/FetchAPI';
 import AddToCartButton from '../../components/AddToCartButton';
 
+/**
+ * Product Page Component
+ *
+ * Displays detailed information about a single product, including its price,
+ * description, tags, and customer reviews. Allows users to add the product to their cart.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered product page.
+ *
+ * @function Product
+ * @description Fetches product details based on the URL parameter (product ID).
+ *
+ * @constant {Object} useParams - Retrieves the product ID from the URL.
+ * @constant {Object} useFetchAPI - Custom hook that fetches product data from an external API.
+ * @constant {Object} product - The product details including title, price, description, and images.
+ * @constant {boolean} isLoading - Indicates if the product data is still loading.
+ * @constant {boolean} isError - Indicates if there was an error fetching the data.
+ * @constant {string|null} discountDifference - The calculated price difference if the product is discounted.
+ *
+ * @returns {JSX.Element} - Returns JSX elements for product details, pricing, reviews, and the add-to-cart button.
+ */
+
 function Product() {
   const { id } = useParams();
   const { data, isLoading, isError } = useFetchAPI(

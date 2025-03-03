@@ -1,5 +1,18 @@
 import { useEffect, useState } from 'react';
 
+/**
+ * Custom Hook: useFetchAPI
+ *
+ * Fetches data from a given API endpoint and manages loading and error states.
+ *
+ * @function useFetchAPI
+ * @param {string} url - The API endpoint to fetch data from.
+ * @returns {Object} Hook state values.
+ * @returns {any} return.data - The fetched data, or null if not yet available.
+ * @returns {boolean} return.isLoading - Indicates if the data is currently being loaded.
+ * @returns {boolean} return.isError - Indicates if an error occurred during the fetch process.
+ */
+
 export default function useFetchAPI(url) {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);

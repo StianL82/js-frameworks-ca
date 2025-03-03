@@ -4,6 +4,28 @@ import ProductGrid from '../../components/ProductGrid';
 import SearchBar from '../../components/SearchBar';
 import useFetchAPI from '../../hooks/FetchAPI';
 
+/**
+ * Home Page Component
+ *
+ * Displays a list of products fetched from an API. Includes a search functionality
+ * that filters the products based on user input.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered home page.
+ *
+ * @function Home
+ * @description Fetches and displays a list of products with search functionality.
+ *
+ * @constant {Object} useFetchAPI - Custom hook that fetches product data from an external API.
+ * @constant {Array} filteredProducts - State containing the filtered list of products.
+ * @constant {boolean} isLoading - Indicates if the data is still loading.
+ * @constant {boolean} isError - Indicates if there was an error fetching the data.
+ *
+ * @function handleSearch
+ * @description Filters the product list based on the search term.
+ * @param {string} searchTerm - The term entered by the user in the search bar.
+ */
+
 function Home() {
   const {
     data: products,

@@ -6,6 +6,21 @@ import { NavLink } from 'react-router-dom';
 import * as S from './index.styles';
 import CartIcon from '../CartIcon';
 
+/**
+ * HeaderNav Component
+ *
+ * Displays the navigation bar with links to different pages and a cart icon.
+ * The navbar is responsive and collapses on smaller screens.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered HeaderNav component.
+ *
+ * @state {boolean} isExpanded - Controls whether the navigation menu is expanded.
+ * @ref {Object} navRef - Reference to the navigation container for detecting clicks outside.
+ *
+ * @effect Adds and removes an event listener to close the menu when clicking outside.
+ */
+
 function HeaderNav() {
   const [isExpanded, setIsExpanded] = useState(false);
   const navRef = useRef(null);
