@@ -12,11 +12,7 @@ function CheckoutButton() {
     navigate('/CheckoutSuccess');
   };
 
-  return (
-    <S.Button onClick={handleCheckout}>
-      Continue to Checkout
-    </S.Button>
-  );
+  return <S.Button onClick={handleCheckout}>Continue to Checkout</S.Button>;
 }
 
 export default CheckoutButton;

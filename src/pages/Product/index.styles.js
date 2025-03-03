@@ -88,4 +88,3 @@ export const SaveText = styled.p`
   margin-top: 8px;
   font-weight: bold;
 `;
-

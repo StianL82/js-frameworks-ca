@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from "react";
-import * as S from "./index.styles";
-import ProductGrid from "../../components/ProductGrid";
-import SearchBar from "../../components/SearchBar";
-import useFetchAPI from "../../hooks/FetchAPI";
+import React, { useState, useEffect } from 'react';
+import * as S from './index.styles';
+import ProductGrid from '../../components/ProductGrid';
+import SearchBar from '../../components/SearchBar';
+import useFetchAPI from '../../hooks/FetchAPI';
 
 function Home() {
-  const { data: products, isLoading, isError } = useFetchAPI("https://v2.api.noroff.dev/online-shop/");
+  const {
+    data: products,
+    isLoading,
+    isError,
+  } = useFetchAPI('https://v2.api.noroff.dev/online-shop/');
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
@@ -15,7 +19,7 @@ function Home() {
   }, [products]);
 
   const handleSearch = (searchTerm) => {
-    if (searchTerm === "") {
+    if (searchTerm === '') {
       setFilteredProducts(products.data);
     } else {
       const filtered = products.data.filter((product) =>

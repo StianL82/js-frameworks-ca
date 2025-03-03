@@ -1,28 +1,28 @@
-import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
-import CheckoutButton from "./index";
-import { useCart } from "../../components/CartContext";
-import { useNavigate } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import CheckoutButton from './index';
+import { useCart } from '../../components/CartContext';
+import { useNavigate } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-jest.mock("../../components/CartContext", () => ({
+jest.mock('../../components/CartContext', () => ({
   useCart: jest.fn(),
 }));
 
-jest.mock("react-router-dom", () => ({
+jest.mock('react-router-dom', () => ({
   useNavigate: jest.fn(),
 }));
 
 const theme = {
   color: {
-    white: "#FFFFFF",
-    primary: "#007BFF",
-    danger: "#FF0000",
+    white: '#FFFFFF',
+    primary: '#007BFF',
+    danger: '#FF0000',
   },
 };
 
-describe("CheckoutButton", () => {
-  test("renders Checkout button", () => {
+describe('CheckoutButton', () => {
+  test('renders Checkout button', () => {
     const mockClearCart = jest.fn();
     useCart.mockReturnValue({ clearCart: mockClearCart });
     const mockNavigate = jest.fn();
@@ -34,10 +34,10 @@ describe("CheckoutButton", () => {
       </ThemeProvider>
     );
 
-    expect(screen.getByText("Continue to Checkout")).toBeInTheDocument();
+    expect(screen.getByText('Continue to Checkout')).toBeInTheDocument();
   });
 
-  test("calls clearCart and navigates to CheckoutSuccess on click", () => {
+  test('calls clearCart and navigates to CheckoutSuccess on click', () => {
     const mockClearCart = jest.fn();
     useCart.mockReturnValue({ clearCart: mockClearCart });
     const mockNavigate = jest.fn();
@@ -49,11 +49,10 @@ describe("CheckoutButton", () => {
       </ThemeProvider>
     );
 
-    const button = screen.getByText("Continue to Checkout");
+    const button = screen.getByText('Continue to Checkout');
     fireEvent.click(button);
 
     expect(mockClearCart).toHaveBeenCalled();
-    expect(mockNavigate).toHaveBeenCalledWith("/CheckoutSuccess");
+    expect(mockNavigate).toHaveBeenCalledWith('/CheckoutSuccess');
   });
 });
-

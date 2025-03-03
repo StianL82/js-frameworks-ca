@@ -62,19 +62,19 @@ export const DiscountedPrice = styled.span`
 `;
 
 export const Button = styled(ButtonBase)`
-  background-color: ${(props) => props.theme.color.primaryColor || "#007bff"} !important;
-  color: ${(props) => props.theme.color.white || "#ffffff"} !important;
+  background-color: ${(props) =>
+    props.theme.color.primaryColor || '#007bff'} !important;
+  color: ${(props) => props.theme.color.white || '#ffffff'} !important;
   border: none;
 
   &:hover {
-    background-color: ${(props) => props.theme.color.buttonHoverBg || "#0056b3"} !important;
-    color: ${(props) => props.theme.color.white || "#ffffff"} !important;
+    background-color: ${(props) =>
+      props.theme.color.buttonHoverBg || '#0056b3'} !important;
+    color: ${(props) => props.theme.color.white || '#ffffff'} !important;
   }
 
   &:focus {
-    outline: 2px solid ${(props) => props.theme.color.primaryColor || "#0056b3"} !important;
+    outline: 2px solid ${(props) => props.theme.color.primaryColor || '#0056b3'} !important;
     outline-offset: 2px;
   }
 `;
-
-

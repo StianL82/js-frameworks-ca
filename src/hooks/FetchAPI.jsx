@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export default function useFetchAPI(url) {
   const [data, setData] = useState(null);
@@ -24,7 +24,7 @@ export default function useFetchAPI(url) {
         }
       } catch (error) {
         if (isMounted) {
-          console.error("Error fetching data:", error);
+          console.error('Error fetching data:', error);
           setIsError(true);
         }
       } finally {

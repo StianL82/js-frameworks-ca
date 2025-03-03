@@ -9,8 +9,7 @@ function Checkout() {
   const { cart, removeFromCart, updateQuantity } = useCart();
 
   const total = cart.reduce(
-    (sum, item) =>
-      sum + (item.discountedPrice ?? item.price) * item.quantity,
+    (sum, item) => sum + (item.discountedPrice ?? item.price) * item.quantity,
     0
   );
 
@@ -57,7 +56,12 @@ function Checkout() {
                     </button>
                   </div>
                   <p>
-                    Price: {((product.discountedPrice ?? product.price) * product.quantity).toFixed(2)} kr
+                    Price:{' '}
+                    {(
+                      (product.discountedPrice ?? product.price) *
+                      product.quantity
+                    ).toFixed(2)}{' '}
+                    kr
                   </p>
                 </div>
                 <button
@@ -74,12 +78,16 @@ function Checkout() {
 
         <div className="col-md-5">
           <S.CartSummary>
-          <h2 className="cart-summary-title">Cart Summary</h2>
+            <h2 className="cart-summary-title">Cart Summary</h2>
             <ul>
               {cart.map((product) => (
                 <li key={product.id}>
                   {product.title} x {product.quantity} -{' '}
-                  {((product.discountedPrice ?? product.price) * product.quantity).toFixed(2)} kr
+                  {(
+                    (product.discountedPrice ?? product.price) *
+                    product.quantity
+                  ).toFixed(2)}{' '}
+                  kr
                 </li>
               ))}
             </ul>

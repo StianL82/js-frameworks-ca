@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { FaSearch } from "react-icons/fa";
-import * as S from "./index.styles";
+import React, { useState, useEffect } from 'react';
+import { FaSearch } from 'react-icons/fa';
+import * as S from './index.styles';
 
 function SearchBar({ onSearch }) {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const debounceTimeout = setTimeout(() => {
@@ -37,7 +37,3 @@ function SearchBar({ onSearch }) {
 }
 
 export default SearchBar;
-
-
-
-

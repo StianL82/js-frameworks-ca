@@ -1,6 +1,6 @@
-import React from "react";
-import ProductCard from "../ProductCard";
-import * as S from "./index.styles";
+import React from 'react';
+import ProductCard from '../ProductCard';
+import * as S from './index.styles';
 
 function ProductGrid({ products }) {
   return (

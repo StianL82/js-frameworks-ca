@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { NavLink } from "react-router-dom";
-import * as S from "./index.styles";
-import CartIcon from "../CartIcon";
+import React, { useState, useEffect, useRef } from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from 'react-router-dom';
+import * as S from './index.styles';
+import CartIcon from '../CartIcon';
 
 function HeaderNav() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -17,9 +17,9 @@ function HeaderNav() {
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
@@ -68,5 +68,3 @@ function HeaderNav() {
 }
 
 export default HeaderNav;
-
-

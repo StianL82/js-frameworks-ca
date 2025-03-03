@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const GridContainer = styled.div`
   display: grid;
@@ -14,4 +14,3 @@ export const GridContainer = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-

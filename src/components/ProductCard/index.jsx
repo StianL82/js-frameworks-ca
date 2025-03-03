@@ -1,9 +1,10 @@
-import React from "react";
-import * as S from "./index.styles";
-import { Link } from "react-router-dom";
+import React from 'react';
+import * as S from './index.styles';
+import { Link } from 'react-router-dom';
 
 function ProductCard({ product }) {
-  const hasDiscount = product.discountedPrice && product.discountedPrice < product.price;
+  const hasDiscount =
+    product.discountedPrice && product.discountedPrice < product.price;
 
   return (
     <S.Card as={Link} to={`/product/${product.id}`}>
@@ -25,5 +26,3 @@ function ProductCard({ product }) {
 }
 
 export default ProductCard;
-
-

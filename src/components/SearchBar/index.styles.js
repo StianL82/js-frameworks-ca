@@ -32,8 +32,3 @@ export const Input = styled.input`
     box-shadow: 0 0 4px ${(props) => props.theme.color.primaryColor};
   }
 `;
-
-
-
-
-

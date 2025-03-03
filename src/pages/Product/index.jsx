@@ -1,13 +1,15 @@
-import React from "react";
-import * as S from "./index.styles";
-import { useParams } from "react-router-dom";
-import { FaArrowCircleLeft } from "react-icons/fa";
-import useFetchAPI from "../../hooks/FetchAPI";
-import AddToCartButton from "../../components/AddToCartButton";
+import React from 'react';
+import * as S from './index.styles';
+import { useParams } from 'react-router-dom';
+import { FaArrowCircleLeft } from 'react-icons/fa';
+import useFetchAPI from '../../hooks/FetchAPI';
+import AddToCartButton from '../../components/AddToCartButton';
 
 function Product() {
   const { id } = useParams();
-  const { data, isLoading, isError } = useFetchAPI(`https://v2.api.noroff.dev/online-shop/${id}`);
+  const { data, isLoading, isError } = useFetchAPI(
+    `https://v2.api.noroff.dev/online-shop/${id}`
+  );
 
   const product = data?.data;
 
@@ -40,16 +42,17 @@ function Product() {
             <S.ProductImage src={product.image.url} alt={product.title} />
             {product.tags && product.tags.length > 0 && (
               <div className="mt-3">
-                <strong>Tags:</strong> {product.tags.join(", ")}
+                <strong>Tags:</strong> {product.tags.join(', ')}
               </div>
             )}
           </div>
           <S.ProductInfo>
             <h1 className="display-5 mb-4">{product.title}</h1>
-            {product.discountedPrice && product.discountedPrice < product.price ? (
+            {product.discountedPrice &&
+            product.discountedPrice < product.price ? (
               <>
                 <p className="h4">
-                  Price: kr {product.discountedPrice}{" "}
+                  Price: kr {product.discountedPrice}{' '}
                   <span className="text-danger h5">
                     (<strike>kr {product.price}</strike>)
                   </span>
@@ -87,6 +90,3 @@ function Product() {
 }
 
 export default Product;
-
-
-

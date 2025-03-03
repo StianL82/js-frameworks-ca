@@ -102,7 +102,6 @@ export const CartSummary = styled.div`
   }
 `;
 
-
 export const TotalText = styled.p`
   font-weight: bold;
   font-size: 1.5rem;
